@@ -18,7 +18,6 @@
   //  addEventListener('input', inputFieldsOninput);
   };
 */
-  var form = document.querySelector('.contact-form');
 
   var nameInput = document.getElementById('name');
   var surnameInput = document.getElementById('surname');
@@ -26,8 +25,13 @@
   var emailInput = document.getElementById('email');
   var dateInput = document.getElementById('date');
   var regionInput = document.getElementById('region');
-  var periodInput = document.getElementById('period');
-  var amountInput = document.getElementById('amount');
+
+  var scaleInput1 = document.getElementById('scale1');
+  var scaleInput2 = document.getElementById('scale2');
+  var periodInput = document.getElementById('period-box');
+  var amountInput = document.getElementById('amount-box');
+  var periodInput2 = document.getElementById('period-box-2');
+  var amountInput2 = document.getElementById('amount-box-2');
 
   var nameDiv = document.getElementById('alert-name');
   var surnameDiv = document.getElementById('alert-surname');
@@ -38,6 +42,22 @@
 
 
   var submitButton = document.getElementById('form-submit-2');
+
+  scaleInput1.value = 5000;
+  console.log(scaleInput1.value);
+
+  scaleInput1.onchange = function() {
+    amountInput.value = scaleInput1.value;
+    amountInput2.value = scaleInput1.value;
+  };
+
+  scaleInput2.value = 15;
+  console.log(scaleInput2.value);
+
+  scaleInput2.onchange = function() {
+    periodInput.value = scaleInput2.value;
+    periodInput2.value = scaleInput2.value;
+  };
 
 
   /*
