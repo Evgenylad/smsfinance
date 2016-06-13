@@ -1,0 +1,527 @@
+
+/* GLOBAL STYLES */
+body {
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+.container {
+  padding: 0;
+}
+
+.site-wrapper {
+  box-sizing: border-box;
+  max-width: 768px;
+
+}
+
+
+/* hiding default Bootstrap styles for nested blocks */
+.col-xs-8,
+.col-xs-4,
+.col-xs-6--nested,
+.col-xs-12--nested {
+  padding: 0;
+}
+
+.row {
+  margin: 0;
+}
+
+/* PAGE STILES */
+.top-row {
+  position: relative;
+  width: 100%;
+  padding-top: 28px;
+  font-weight: normal;
+  font-size: 4.3vw;
+  line-height: 5.1vw;
+  background-color: #00aed1;
+}
+  .top-row__slogan-row {
+    margin-bottom: 10px;
+    padding: 0 7%;
+  }
+    .top-row__slogan-wrapper {
+      width: 30%;
+    }
+      .top-row__slogan {
+        display: block;
+        width: 100%;
+
+        text-align: left;
+        font-weight: bolder;
+        color: #015566;
+      }
+    .top-row__details-wrapper {
+        width: 70%;
+    }
+      .top-row__details {
+        display: block;
+        width: 100%;
+        font-size: 4.3vw;
+        line-height: 5.1vw;
+        text-align: left;
+        color: #ffffff;
+      }
+  .top-row__loan-details {
+    padding: 0;
+  }
+  .credit-details-form__wrapper {
+    padding: 0 7%;
+  }
+  .credit-details-form {
+    width: 100%;
+  }
+    .credit-details-form__scale-group:not(:last-of-type) {
+      margin-bottom: 5px;
+    }
+      .credit-details-form__scale-label {
+        font-size: 5.0vw;
+        line-height: 5.2vw;
+        margin-bottom: 5px;
+        font-weight: bolder;
+      }
+    .credit-details-form__box-group {
+      width: 43.7%;
+      margin-bottom: 10px;
+    }
+    .credit-details-form__box-group--right {
+      float: right;
+    }
+      .credit-details-form__box-input {
+        width: 100%;
+        height: 50px;
+
+        font-family: "Open Sans", sans-serif;
+        font-size: 5.8vw;
+        line-height: 6vw;
+        color: #ffffff;
+        text-align: center;
+        background-color: inherit;
+        box-shadow: inset -1px 1px 1px 0px rgba(9, 8, 8, 0.75),
+        inset 1px -1px 1px 0px rgba(255, 255, 255, 0.75);
+        outline: 0;
+        border: 0;
+        border-radius: 0;
+      }
+      .credit-details-form__box-input:valid {
+        box-shadow: inset -1px 1px 1px 0px rgba(9, 8, 8, 0.75),
+        inset 1px -1px 1px 0px rgba(255, 255, 255, 0.75);
+      }
+      .credit-details-form__box-label {
+        width: 100%;
+
+        font-size: 3vw;
+        line-height: 3.2vw;
+        text-transform: none;
+        font-weight: normal;
+      }
+    .credit-details-form__conditions {
+      display: block;
+      width: 100%;
+
+      margin-bottom: 10px;
+
+      font-size: 2.5vw;
+      line-height: 2.8vw;
+    }
+  .credit-details-form__call-to-action {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    bottom: -105px;
+    left: 0;
+    right: 0;
+
+    height: auto;
+    min-height: 105px;
+
+    background-color: rgba(0, 174, 209, 0.46);
+    z-index: 2000;
+  }
+
+  .contact-form__call-to-action {
+    width: 100%;
+    position: relative;
+  }
+    .btn-block {
+      width: 80%;
+      height: auto;
+
+      margin: 0 auto;
+    }
+    .btn-block--contact-form {
+      width: 100%;
+    }
+      .btn__call-to-action {
+        width: 100%;
+        margin: 0;
+        font-family: "Open Sans", sans-serif;
+        font-size: 7.6vw;
+        line-height: 10.6vw;
+        text-transform: uppercase;
+
+        border-radius: 0;
+      }
+        .btn__text {
+          text-shadow: 0px 0px 0px rgba(255, 255, 255, 0.75);
+        }
+.immage-row {
+  height: 323px;
+
+  background: url('../img/Money-Woman-med.jpg') no-repeat center;
+  background-size: cover;
+}
+
+.algoritm-row {
+  width: 100%;
+  background-color: #00aed1;
+}
+ .algoritm-row__header {
+   display: block;
+   width: 100%;
+
+   margin-bottom: 18px;
+
+   text-align: center;
+   font-weight: bold;
+   font-size: 6.3vw;
+   line-height: 8.85vw;
+ }
+ .algoritm-row__item {
+   position: relative;
+   display: block;
+   width: 100%;
+
+   margin-bottom: 18px;
+
+   text-align: center;
+   font-size: 3.8vw;
+   line-height: 4.56vw;
+ }
+   .algoritm-row__img {
+     width: 20%;
+     height: auto;
+
+     margin: 0 auto;
+     margin-bottom: 18px;
+   }
+
+ .algoritm-row__item--first {
+   margin-bottom: 20px;
+ }
+
+ .algoritm-row__item--second {
+   margin-bottom: 28px;
+ }
+
+ .algoritm-row__item--third {
+   margin-bottom: 24px;
+ }
+
+ .algoritm-row__item--fourth {
+   margin-bottom: 25px;
+ }
+   .algoritm-row__text--fourth {
+     display: block;
+     width: 62%;
+     margin-left: 19%;
+   }
+
+ .algoritm-row__item--fifth {
+   margin-bottom: 25px;
+ }
+   .algoritm-row__text--fifth {
+     display: block;
+     width: 75%;
+     margin-left: 12.5%;
+   }
+
+ .algoritm-row__item--sixth {
+   margin-bottom: 20px;
+ }
+
+.contact-form__header {
+  display: block;
+
+  margin-bottom: 20px;
+
+  text-align: center;
+  color: #025f71;
+
+  font-size: 6.3vw;
+  line-height: 8.8vw;
+  font-weight: bolder;
+}
+ .contact-form__group {
+   min-height: 75px;
+   margin-bottom: 5px;
+
+   font-size: 0;
+ }
+ .contact-form__group--half-width {
+   padding: 0;
+   padding-top: 10px;
+   margin-bottom: 10px;
+ }
+   .contact-form__alert {
+     box-sizing: border-box;
+     display: inline-block;
+
+     width: 70%;
+
+     margin-bottom: 5px;
+     margin-left: 5px;
+
+     visibility: hidden;
+     text-align: right;
+     font-style: italic;
+     font-size: 3.5vw;
+     line-height: 4vw;
+     font-style: italic;
+     font-weight: bold;
+     text-transform: none;
+
+     color: rgba(255, 0, 0, 0.5);
+   }
+   .contact-form__label {
+     display: inline-block;
+     width: 28%;
+     font-size: 3vw;
+     line-height: 3.3vw;
+     font-weight: normal;
+     text-transform: none;
+
+     color: #7b7c7c;
+   }
+   .contact-form__input {
+     height: 53px;
+
+     font-size: 5.6vw;
+     line-height: 6vw;
+
+     border: 1px solid #a8a8a8;
+     border-radius: 0;
+     box-shadow: inset 1px 1px 1px 0px rgba(8, 8, 8, 0.75);
+   }
+   .contact-form__item {
+     position: absolute;
+     top: 40px;
+     left: 25px;
+
+     font-size: 5.6vw;
+     line-height: 6vw;
+     font-weight: normal;
+     color: #7b7c7c;
+   }
+   .contact-form__input--half-width {
+     text-align: center;
+   }
+   .contact-form__select {
+     position: relative;
+     height: 53px;
+
+     font-size: 5.6vw;
+     line-height: 5.6vw;
+     font-family: "Open Sans", sans-serif;
+
+     border: 1px solid #a8a8a8;
+     border-radius: 0;
+     color: #ffffff;
+     background: linear-gradient(to top, #a0a0a0, #cccccc);
+     -webkit-appearance: none;
+     -moz-appearance: none;
+   }
+     .contact-form__group--select::after {
+       content: "";
+       position: absolute;
+       right: 30px;
+       top: 37px;
+
+       border-left: 23px solid transparent;
+	     border-right: 23px solid transparent;
+	     border-top: 30px solid #ffffff;
+
+       border-radius: 8px;
+     }
+   .contact-form__option {
+     color: #000000;
+     background: #ffffff;
+   }
+
+   .contact-form__input:valid + .contact-form__item {
+     display: none;
+   }
+   .contact-form__input:focus + .contact-form__item {
+     display: none;
+   }
+
+.footer {
+  background-color: #00aed1;
+  height: 103px;
+}
+  .footer__slogan {
+    text-align: center;
+    font-size: 9vw;
+    line-height: 103px;
+
+    font-weight: bolder;
+
+    color: #ffffff;
+  }
+
+@media (min-width: 768px) {
+  .top-row {
+    font-size: 23px;
+    line-height: 26px;
+  }
+      .top-row__details {
+        float: right;
+        width: 270px;
+        font-size: 20px;
+        line-height: 26px;
+      }
+      .credit-details-form__scale-label {
+        font-size: 27px;
+        line-height: 30px
+      }
+      .credit-details-form__box-input {
+        font-size: 33px;
+      }
+      .credit-details-form__box-label {
+        font-size: 15px;
+        line-height: 19px;
+      }
+
+}
+/* SET-UP CUSTOM SLIDER */
+
+input[type=range] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 100%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  border: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type=range]:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+/* Styling the Thumb */
+
+/* Special styling for WebKit/Blink */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  border: 0;
+  height: 28px;
+  width: 18px;
+  background-image: url('../img/handle.png');
+  background-size: auto;
+  background-position: center;
+  border-radius: 0;
+  cursor: pointer;
+  margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);; /* Add cool effects to your sliders! */
+}
+
+/* All the same stuff for Firefox */
+input[type=range]::-moz-range-thumb {
+  border: 0;
+  height: 29px;
+  width: 19px;
+  background-image: url('../img/handle.png');
+  background-size: auto;
+  background-position: center;
+  border-radius: 0;
+  cursor: pointer;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);;
+}
+
+/* All the same stuff for IE */
+input[type=range]::-ms-thumb {
+  height: 28px;
+  width: 18px;
+  background-image: url('../img/handle.png');
+  background-size: auto;
+  background-position: center;
+  border: 0;
+  border-radius: 0;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);;
+  cursor: pointer;
+}
+
+/* Styling the Track */
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: inset -1px 1px 1px 0px rgba(9, 8, 8, 0.75),
+  inset 1px -1px 1px 0px rgba(255, 255, 255, 0.75);
+  background: #00aed1;
+  border-radius: 1.3px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #00aed1;
+}
+
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  box-shadow: inset -1px 1px 1px 0px rgba(9, 8, 8, 0.75),
+  inset 1px -1px 1px 0px rgba(255, 255, 255, 0.75);
+  background: #00aed1;
+  border-radius: 1.3px;
+}
+
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 10px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #015566;
+  border-radius: 2.6px;
+  box-shadow: inset -1px 1px 1px 0px rgba(9, 8, 8, 0.75),
+  inset 1px -1px 1px 0px rgba(255, 255, 255, 0.75);
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]::-ms-fill-upper {
+  background: #00aed1;
+  border-radius: 2.6px;
+  box-shadow: inset -1px 1px 1px 0px rgba(9, 8, 8, 0.75),
+  inset 1px -1px 1px 0px rgba(255, 255, 255, 0.75);
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #00aed1;
+}
