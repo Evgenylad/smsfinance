@@ -1,23 +1,6 @@
 'use strict';
 
 (function() {
-/*  var formContainer = document.querySelector('.overlay-container');
-  var formOpenButton = document.querySelector('.reviews-controls-new');
-  var formCloseButton = document.querySelector('.review-form-close');
-
-  formOpenButton.onclick = function(evt) {
-    evt.preventDefault();
-    formContainer.classList.remove('invisible');
-    _addListeners();
-  };
-
-  formCloseButton.onclick = function(evt) {
-    evt.preventDefault();
-    formContainer.classList.add('invisible');
-    _removeListeners();
-  //  addEventListener('input', inputFieldsOninput);
-  };
-*/
 
   var nameInput = document.getElementById('name');
   var surnameInput = document.getElementById('surname');
@@ -44,7 +27,6 @@
   var submitButton = document.getElementById('form-submit-2');
 
   scaleInput1.value = 5000;
-  console.log(scaleInput1.value);
 
   scaleInput1.onchange = function() {
     amountInput.value = scaleInput1.value;
@@ -52,78 +34,20 @@
   };
 
   scaleInput2.value = 15;
-  console.log(scaleInput2.value);
 
   scaleInput2.onchange = function() {
     periodInput.value = scaleInput2.value;
     periodInput2.value = scaleInput2.value;
   };
 
-
-  /*
-  var browserCookies = require('browser-cookies');
-  reviewMarkInput.value = browserCookies.get('reviewMarkInput') || reviewMarkInput.value;
-  nameInput.value = browserCookies.get('nameInput') || nameInput.value;
-
-  var today = new Date();
-  var thisYear = today.getFullYear();
-  var myBirthday = new Date(thisYear, 9, 14);
-  var expires = (myBirthday - today) / 24 / 60 / 60 / 1000;
-*/
-
-
-  /*
-  form.onsubmit = function() {
-    browserCookies.set('nameInput', nameInput.value, {expires: expires});
-    browserCookies.set('reviewMarkInput', reviewMarkInput.value, {expires: expires});
-    this.submit();
-  };
-  */
-
-//  _disableForm();
-
-  /* function onRadioChange() {
-    var currentValue = parseInt(reviewMarkInput.value, 10);
-
-    if(currentValue < 3) {
-      textInput.setAttribute('required', true);
-    } else {
-      textInput.removeAttribute('required');
-    }
-
-    validateForm();
-  }
-*/
-
-
-  /*  surnameInput.onfocusout = validateSurnameInput;
-    phoneInput.onfocusout = validatePhoneInput;
-    emailInput.onfocusout = validateEmailInput;
-    dateInput.onfocusout = validateDateInput;
-    regionInput.onfocusout = validateRegionInput;
-    periodInput.onfocusout = validatePeriodInput;
-    amountInput.onfocusout = validateAmountInput;
-  }
-  */
-
-/*  function _removeListeners() {
-
-    for(var i = 0; i < ratingRadioButtons.length; i++) {
-      ratingRadioButtons[i].onchange = null;
-    }
-    textInput.oninput = null;
-    textInput.oninput = null;
-  }
-*/
-
   _disableForm();
   nameInput.onblur = function() {
     if (_checkField(nameInput)) {
       _alertHide(nameDiv);
-
+      _borderRedHide(nameInput);
     } else {
       _alertShow(nameDiv);
-
+      _borderRedShow(nameInput);
     }
     validateForm();
   };
@@ -131,38 +55,44 @@
   surnameInput.onblur = function() {
     if (_checkField(surnameInput)) {
       _alertHide(surnameDiv);
+      _borderRedHide(surnameInput);
     } else {
       _alertShow(surnameDiv);
-
+      _borderRedShow(surnameInput);
     }
     validateForm();
   };
 
   phoneInput.onblur = function() {
-    if (_checkField(phoneInput)) {
+    if (_checkPhone(phoneInput)) {
       _alertHide(phoneDiv);
+      _borderRedHide(phoneInput);
+      console.log(phoneInput.value);
     } else {
       _alertShow(phoneDiv);
-
+      _borderRedShow(phoneInput);
     }
     validateForm();
   };
 
   emailInput.onblur = function() {
-    if (_checkField(emailInput)) {
+    if (_checkEmail(emailInput)) {
       _alertHide(emailDiv);
+      _borderRedHide(emailInput);
+      console.log(emailInput.value);
     } else {
       _alertShow(emailDiv);
-
+      _borderRedShow(emailInput);
     }
   };
 
   dateInput.onblur = function() {
-    if (_checkField(dateInput)) {
+    if (_checkDate(dateInput)) {
       _alertHide(dateDiv);
+      _borderRedHide(dateInput);
     } else {
       _alertShow(dateDiv);
-
+      _borderRedShow(dateInput);
     }
   };
 
@@ -179,7 +109,6 @@
     _enableForm();
     if (_checkField(nameInput) && _checkField(surnameInput) && _checkField(phoneInput)) {
       _enableForm();
-      console.log(surnameInput);
     } else {
       _disableForm();
     }
@@ -206,6 +135,16 @@
     div.style.visibility = 'visible';
   }
 
+  function _borderRedShow(input) {
+    input.style.boxShadow = 'none';
+    input.style.border = '1px solid rgba(255, 0, 0, 0.5)';
+  }
+
+  function _borderRedHide(input) {
+    input.style.boxShadow = 'inset 1px 1px 1px 0px rgba(8, 8, 8, 0.75)';
+    input.style.border = '1px solid #a8a8a8';
+  }
+
   function _checkField(input) {
     var inputLength = input.value.length;
     if (inputLength < 1 && input.required) {
@@ -214,4 +153,35 @@
       return true;
     }
   }
+
+  function _checkEmail(email) {
+    var regExp = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+    var emailChecked = email.value;
+    if (regExp.test(emailChecked)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function _checkPhone(phone) {
+    var regExp = /^\d[\d\(\)\ -]{4,14}\d$/;
+    var phoneChecked = phone.value;
+    if (regExp.test(phoneChecked)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function _checkDate(date) {
+    var regExp = /(0[1-9]|[12][0-9]|3[01])[- /.](0[1-9]|1[012])[- /.](19|20)\d\d/;
+    var dateChecked = date.value;
+    if (regExp.test(dateChecked)) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
 })();
