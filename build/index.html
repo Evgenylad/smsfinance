@@ -49,6 +49,7 @@
                 <div class="credit-details-form__box-group credit-details-form__box-group--right form-group col-xs-6 col-xs-6--nested">
                   <label for="period-box" class="credit-details-form__box-label">Срок займа</label>
                   <input type="text" class="credit-details-form__box-input form-control col-xs-12" id="period-box" min="1" max="30" value="15" step="1">
+                  <span class="credit-details-form__period">дней</span>
                 </div>
               </div>
 
@@ -57,7 +58,7 @@
 
             <div class="credit-details-form__call-to-action">
               <div class="btn-block">
-                <button class="btn btn__call-to-action btn-success btn-large" id="form-submit-1">Получить деньги</button>
+                <a class="btn btn__call-to-action btn-success btn-large" id="form-submit-1" href="#contact-form-header">Получить деньги</a>
               </div>
             </div>
           </form>
@@ -106,7 +107,7 @@
       </div>
 
       <div class="col-xs-12 contact-form__row">
-        <h2 class="contact-form__header">
+        <h2 class="contact-form__header" id="contact-form-header">
           Заявка на заЁм
         </h2>
         <form class="contact-form" action="#" method="post">
@@ -162,6 +163,7 @@
             <div class="contact-form__group contact-form__group--half-width form-group col-xs-5 col-xs-offset-2">
               <label for="period-box-2" class="contact-form__label form-control__label">Сумма</label>
               <input type="text"  id="period-box-2" class="contact-form__input contact-form__input--half-width form-control col-xs-12" min="1" max="30" value="15" step="1" required>
+              <span class="contact-form__period">Дней</span>
             </div>
           </div>
           <div class="contact-form__group col-xs-12">
@@ -180,6 +182,6 @@
     </footer>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="js/form.js"></script>
 </body>
 </html>
