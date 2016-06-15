@@ -14,6 +14,7 @@
   <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
 	<link href="css/style.css" rel="stylesheet" type="text/css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,800,800italic,700italic,700,600italic,600,400italic,300italic,300' rel='stylesheet' type='text/css'>
+  <link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css" />
   <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet prefetch">
 
 </head>
@@ -25,7 +26,7 @@
           <div class="top-row__slogan-wrapper col-xs-4">
             <span class="top-row__slogan">Деньги – сейчас!</span></div>
           <div class="top-row__details-wrapper col-xs-8">
-            <span class="top-row__details">Вам доступно до<strong> 15&nbsp;000 <i class="top-row__rur-logo"></i></strong>уже через <strong>30 минут!</strong></span></div>
+            <span class="top-row__details">Вам доступно до<strong> 15&nbsp;000&nbsp;<span class="credit-details-form__rubl">&#8399;</span></strong> уже через <strong>30 минут!</strong></span></div>
         </div>
         <div class="col-xs-12 col-xs-12--nested">
           <form action="#" class="credit-details-form">
@@ -44,6 +45,7 @@
                 <div class="credit-details-form__box-group form-group col-xs-6 col-xs-6--nested">
                   <label for="amount-box" class="credit-details-form__box-label">Например, Вы выберете</label>
                   <input type="text" class="credit-details-form__box-input form-control col-xs-12" id="amount-box" min="1000" max="15000" step="100" value="5000">
+                  <span class="credit-details-form__rubl credit-details-form__rubl--big">&#8399;</span>
                 </div>
 
                 <div class="credit-details-form__box-group credit-details-form__box-group--right form-group col-xs-6 col-xs-6--nested">
@@ -53,7 +55,7 @@
                 </div>
               </div>
 
-              <span class="credit-details-form__conditions">От 1000 <i></i> до 15000 <i></i></span>
+              <span class="credit-details-form__conditions">От 1000 <span class="credit-details-form__rubl credit-details-form__rubl--small">&#8399;</span> до 15000 <span class="credit-details-form__rubl credit-details-form__rubl---small">&#8399;</span></span>
             </div>
 
             <div class="credit-details-form__call-to-action">
@@ -146,24 +148,27 @@
           <div class="contact-form__group contact-form__group--select form-group col-xs-12">
             <label for="region" class="contact-form__label form-control__label"></label>
             <div class="contact-form__alert" id="alert-region">Внимание! Неверный формат!</div>
-            <select id="region" class="contact-form__select form-control col-xs-12" required>
-              <option class="contact-form__option" value="Регион" selected>Регион</option>
-              <option class="contact-form__option" value="Регион 1">Регион 1</option>
-              <option class="contact-form__option" value="Регион 2">Регион 2</option>
-              <option class="contact-form__option" value="Регион 3">Регион 3</option>
-            </select>
+            <div class="contact-form__styled-select col-xs-12">
+              <select id="region" class="contact-form__select form-control col-xs-12" required>
+                <option class="contact-form__option contact-form__option--first" value="Регион" selected>Регион</option>
+                <option class="contact-form__option" value="Регион 1">Регион 1</option>
+                <option class="contact-form__option" value="Регион 2">Регион 2</option>
+                <option class="contact-form__option" value="Регион 3">Регион 3</option>
+              </select>
+            </div>
           </div>
 
           <div class="contact-form__group col-xs-12">
             <div class="contact-form__group contact-form__group--half-width form-group col-xs-5">
-              <label for="amount-box-2" class="contact-form__label form-control__label">Срок</label>
+              <label for="amount-box-2" class="contact-form__label form-control__label">Сумма</label>
               <input type="text" id="amount-box-2" class="contact-form__input contact-form__input--half-width form-control col-xs-12" min="1000" max="15000" value="5000" step="100" required>
+              <span class="contact-form__rubl contact-form__rubl--big">&#8399;</span>
             </div>
 
             <div class="contact-form__group contact-form__group--half-width form-group col-xs-5 col-xs-offset-2">
-              <label for="period-box-2" class="contact-form__label form-control__label">Сумма</label>
+              <label for="period-box-2" class="contact-form__label form-control__label">Срок</label>
               <input type="text"  id="period-box-2" class="contact-form__input contact-form__input--half-width form-control col-xs-12" min="1" max="30" value="15" step="1" required>
-              <span class="contact-form__period">Дней</span>
+              <span class="contact-form__period">Дн.</span>
             </div>
           </div>
           <div class="contact-form__group col-xs-12">
