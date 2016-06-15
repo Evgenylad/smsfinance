@@ -32,14 +32,14 @@ body {
 .top-row {
   position: relative;
   width: 100%;
-  padding-top: 28px;
+  padding-top: 10px;
   font-weight: normal;
   font-size: 4.3vw;
   line-height: 5.1vw;
   background-color: #00aed1;
 }
   .top-row__slogan-row {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 0 7%;
   }
     .top-row__slogan-wrapper {
@@ -61,7 +61,7 @@ body {
         width: 100%;
         font-size: 4.3vw;
         line-height: 5.1vw;
-        text-align: left;
+        text-align: right;
         color: #ffffff;
       }
   .top-row__loan-details {
@@ -90,14 +90,17 @@ body {
       float: right;
     }
       .credit-details-form__box-input {
+        position: relative;
         width: 100%;
         height: 50px;
+
+        padding-left: 20%;
 
         font-family: "Open Sans", sans-serif;
         font-size: 5.8vw;
         line-height: 6vw;
         color: #ffffff;
-        text-align: center;
+        text-align: left;
         background-color: inherit;
         box-shadow: inset -1px 1px 1px 0px rgba(9, 8, 8, 0.75),
         inset 1px -1px 1px 0px rgba(255, 255, 255, 0.75);
@@ -117,6 +120,16 @@ body {
         text-transform: none;
         font-weight: normal;
       }
+      .credit-details-form__period {
+        position: absolute;
+        top: 53%;
+        left: 40%;
+
+        font-size: 5.8vw;
+        line-height: 6vw;
+
+        color: #ffffff;
+      }
     .credit-details-form__conditions {
       display: block;
       width: 100%;
@@ -127,15 +140,14 @@ body {
       line-height: 2.8vw;
     }
   .credit-details-form__call-to-action {
-    display: -webkit-box;
     display: -ms-flexbox;
+    display: -webkit-flex;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
+    -ms-flex-direction: column;
+    -webkit-flex-direction: column;
             flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
+    -ms-flex-pack: center;
+        -webkit-justify-content: center;
             justify-content: center;
     position: absolute;
     bottom: -105px;
@@ -315,7 +327,7 @@ body {
    }
    .contact-form__item {
      position: absolute;
-     top: 40px;
+     top: 38px;
      left: 25px;
 
      font-size: 5.6vw;
@@ -324,7 +336,20 @@ body {
      color: #7b7c7c;
    }
    .contact-form__input--half-width {
-     text-align: center;
+     position: relative;
+     text-align: left;
+     color: #7b7c7c;
+   }
+   .contact-form__period {
+     position: absolute;
+     top: 55%;
+     left: 35%;
+
+     font-size: 5.6vw;
+     line-height: 6vw;
+
+     color: #7b7c7c;
+     text-transform: uppercase;
    }
    .contact-form__select {
      position: relative;
@@ -381,27 +406,142 @@ body {
 
 @media (min-width: 768px) {
   .top-row {
-    font-size: 23px;
-    line-height: 26px;
+    font-size: 26px;
+    line-height: 30px;
   }
-      .top-row__details {
-        float: right;
-        width: 270px;
-        font-size: 20px;
-        line-height: 26px;
+    .top-row__slogan-row {
+      padding-bottom: 15px;
+    }
+    .top-row__details {
+      display: block;
+      float: right;
+      width: 70%;
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .credit-details-form__scale-label {
+      font-size: 27px;
+      line-height: 30px
+    }
+    .credit-details-form__box-input {
+      font-size: 33px;
+    }
+    .credit-details-form__box-label {
+      font-size: 15px;
+      line-height: 19px;
+    }
+      .credit-details-form__scale-group:not(:last-of-type) {
+        margin-bottom: 10px;
       }
-      .credit-details-form__scale-label {
-        font-size: 27px;
-        line-height: 30px
+        .credit-details-form__scale-label {
+          font-size: 27px;
+          line-height: 32px;
+          margin-bottom: 10px;
+        }
+      .credit-details-form__box-group {
+        margin-bottom: 10px;
       }
-      .credit-details-form__box-input {
-        font-size: 33px;
-      }
-      .credit-details-form__box-label {
-        font-size: 15px;
-        line-height: 19px;
+        .credit-details-form__box-input {
+          height: 83px;
+
+          font-size: 33px;
+          line-height: 36px;
+        }
+        .credit-details-form__period {
+          position: absolute;
+          top: 50%;
+          left: 40%;
+
+          font-size: 33px;
+          line-height: 36px;
+
+          color: #ffffff;
+        }
+       .credit-details-form__conditions {
+          display: block;
+          width: 100%;
+
+          margin-bottom: 10px;
+
+          font-size: 15px;
+          line-height: 18px;
+        }
+      .credit-details-form__call-to-action {
+        bottom: -165px;
+
+        min-height: 165px;
       }
 
+      .contact-form__call-to-action {
+        width: 100%;
+        position: relative;
+      }
+        .btn-block {
+          width: 600px;
+          height: 98px;
+
+          margin: 0 auto;
+        }
+        .btn-block--contact-form {
+          width: 100%;
+        }
+          .btn__call-to-action {
+            height: 90px;
+            font-size: 47px;
+            line-height: 72px;
+          }
+    .contact-form__header {
+      font-size: 42px;
+      line-height: 48px;
+
+    }
+   .contact-form__alert {
+     font-size: 20px;
+     line-height: 24px;
+   }
+   .contact-form__label {
+     font-size: 18px;
+     line-height: 24px;
+   }
+   .contact-form__input {
+     font-size: 28px;
+     line-height: 34px;
+   }
+   .contact-form__item {
+     font-size: 28px;
+     line-height: 34px;
+   }
+   .contact-form__input--half-width {
+     height: 70px;
+     text-align: left;
+
+     padding-left: 20%;
+   }
+   .contact-form__period {
+     top: 53%;
+     font-size: 28px;
+     line-height: 34px;
+
+   }
+   .contact-form__select {
+     font-size: 28px;
+     line-height: 34px;
+   }
+    .footer {
+      height: 103px;
+      margin-top: 30px;
+
+      background-color: #00aed1;
+    }
+      .footer__slogan {
+        text-align: center;
+        font-size: 56px;
+        line-height: 103px;
+
+        font-weight: bolder;
+
+        color: #ffffff;
+      }
 }
 /* SET-UP CUSTOM SLIDER */
 
